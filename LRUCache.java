@@ -12,10 +12,6 @@ HashMap and a doubly linked list. The HashMap provides O(1) access to the nodes 
 his design ensures that both get and put operations run efficiently.
 * */
 class LRUCache {
-    //watch video..how maam thinks
-    //my coding style
-    //DO NEATLY
-    //time complexity
     HashMap<Integer,ListNode> map;
     int capacity;
     ListNode head;
@@ -46,7 +42,6 @@ class LRUCache {
     }
 
     public int get(int key) {
-        //System.out.println(key);
         if(map.containsKey(key))
         {
             ListNode temp=map.get(key);
@@ -61,7 +56,6 @@ class LRUCache {
     }
 
     public void put(int key, int value) {
-        //System.out.println(key);
         if(map.containsKey(key))
         {
             ListNode oldNode=map.get(key);
@@ -74,7 +68,6 @@ class LRUCache {
             if(map.size()==capacity)
             {
                 ListNode lastNode=tail.prev;
-                //System.out.println("failed after this");
                 remove(lastNode);
                 map.remove(lastNode.key);
             }

@@ -15,10 +15,6 @@ the iteration works efficiently through both single integers and nested lists of
 * */
 
 public class NestedIterator implements Iterator<Integer> {
-    //design problem always go for average time complexity
-    //another solution is using 2 stacks..work on it later
-    //both this and BST iterator use stack
-    //so is it a pattern that iterator needs stack ??
     Stack<Iterator<NestedInteger>> myStack;
     NestedInteger nextEl;
     public NestedIterator(List<NestedInteger> nestedList) {
@@ -35,8 +31,6 @@ public class NestedIterator implements Iterator<Integer> {
             {
                 myStack.pop();
 
-                //we need this for empty list case
-                //watch 2nd video for the below case
                 nextEl=null;
             }
             else
